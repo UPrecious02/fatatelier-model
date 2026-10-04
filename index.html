@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Fatalier – Haastrup</title>
+    <meta
+      name="description"
+      content="Fatatelier design platform prototype: 3D project tours, a live design studio, customer accounts, submissions, admin and project tracking."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="top-in">
+        <a class="brand" href="#home"
+          ><span class="wm">FATATELIER</span><span class="sub">Design platform · prototype</span></a
+        >
+        <nav class="nav" id="nav" aria-label="Main">
+          <a href="#home" data-view="home">Overview</a>
+          <a href="#explore" data-view="explore">Explore projects</a>
+          <a href="#studio" data-view="studio">Design studio</a>
+          <a href="#account" data-view="account" class="customer-only">My account</a>
+          <a href="#admin" data-view="admin" class="admin-only">Admin dashboard</a>
+        </nav>
+        <div class="top-tools">
+          <div class="seg" id="role-seg" role="group" aria-label="View as">
+            <button type="button" data-role="customer">Customer</button>
+            <button type="button" data-role="admin">
+              <span class="hide-sm">Fatatelier team</span><span class="show-sm">Team</span>
+            </button>
+          </div>
+          <button
+            class="icon-btn bell"
+            id="bell-btn"
+            type="button"
+            aria-label="Notifications"
+            aria-expanded="false"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+              <path d="M13.7 21a2 2 0 0 1-3.4 0" />
+            </svg>
+            <span class="dot" id="bell-count"></span>
+          </button>
+          <div class="bell-pop" id="bell-pop" hidden></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- OVERVIEW -->
+      <section class="view" id="view-home">
+        <div class="wrap">
+          <div class="hero">
+            <div>
+              <p class="eyebrow">Fatatelier · Newark, NJ · Architecture &amp; millwork</p>
+              <h1 style="margin-top: 14px">Walk through it. Design it. <em>Watch it get built.</em></h1>
+              <p class="lead">
+                Customers step inside finished Fatatelier projects, shape their own room in 3D with real
+                cabinetry, finishes and furniture, then send it to the studio for a quote and follow the build
+                from the Newark shop to install day.
+              </p>
+              <div class="ctas">
+                <a class="btn primary" href="#studio">Open the design studio</a>
+                <a class="btn" href="#explore">Tour a finished project</a>
+              </div>
+            </div>
+            <dl class="spec">
+              <div>
+                <dt>Prototype covers</dt>
+                <dd>All 8 requested modules</dd>
+              </div>
+              <div>
+                <dt>3D engine</dt>
+                <dd>Three.js (WebGL, runs in the browser)</dd>
+              </div>
+              <div>
+                <dt>Devices</dt>
+                <dd>Desktop, tablet, phone</dd>
+              </div>
+              <div>
+                <dt>Demo data</dt>
+                <dd>Stored in this browser only</dd>
+              </div>
+              <div>
+                <dt>Try it as</dt>
+                <dd>Customer, then switch to Fatatelier team</dd>
+              </div>
+            </dl>
+          </div>
+          <nav class="journey" aria-label="Customer journey">
+            <a class="step" href="#explore"
+              ><span class="n">01</span><b>Explore</b
+              ><span>Walk through finished projects in 3D, with before and after.</span></a
+            >
+            <a class="step" href="#studio"
+              ><span class="n">02</span><b>Design</b
+              ><span>Start from a kitchen, living room or bedroom and set the room size.</span></a
+            >
+            <a class="step" href="#studio"
+              ><span class="n">03</span><b>Customize</b
+              ><span>Place pieces, then swap finishes, stone, hardware and fabric live.</span></a
+            >
+            <a class="step" href="#studio"
+              ><span class="n">04</span><b>Save</b
+              ><span>Designs save to the customer account to finish later.</span></a
+            >
+            <a class="step" href="#studio"
+              ><span class="n">05</span><b>Submit</b
+              ><span>Send the design with a brief for consultation and a quote.</span></a
+            >
+            <a class="step" href="#account"
+              ><span class="n">06</span><b>Track</b
+              ><span>Follow stages, milestones and photo updates from the shop.</span></a
+            >
+            <a class="step" href="#account"
+              ><span class="n">07</span><b>Build</b
+              ><span>The team runs it all from the admin dashboard.</span></a
+            >
+          </nav>
+          <div class="how">
+            <div>
+              <p class="eyebrow">How it fits fatatelier.com</p>
+              <h2 style="margin-top: 10px">The WordPress site stays. The platform plugs in beside it.</h2>
+            </div>
+            <div class="how-grid">
+              <div>
+                <h4>Marketing stays in WordPress</h4>
+                <p>
+                  Home, About, Shop, Blog and the 360° tours keep running as they do now. New buttons on
+                  project and shop pages open the 3D tour or the studio.
+                </p>
+              </div>
+              <div>
+                <h4>Platform on its own subdomain</h4>
+                <p>
+                  Something like design.fatatelier.com runs the 3D studio, accounts, submissions and tracking
+                  as a fast web app with its own database.
+                </p>
+              </div>
+              <div>
+                <h4>Real models in production</h4>
+                <p>
+                  Tours are built from Fatatelier's own drawings or scans. Catalog pieces come from the team's
+                  CAD files, so customers configure what the shop can actually make.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPLORE -->
+      <section class="view" id="view-explore">
+        <div class="explore">
+          <div class="stage-box" id="explore-stage">
+            <div class="overlay tl">
+              <div class="glass stage-tabs" id="exp-stages" role="group" aria-label="Project stage">
+                <button type="button" data-stage="before">Before</button>
+                <button type="button" data-stage="process">In progress</button>
+                <button type="button" data-stage="final" class="on">Final</button>
+              </div>
+              <button type="button" class="btn sm glass" id="walk-btn">Walk mode</button>
+              <button type="button" class="btn sm glass" id="exp-reset">Reset view</button>
+            </div>
+            <div class="overlay bl">
+              <div class="glass hint" id="exp-hint">
+                Drag to look around · scroll or pinch to zoom · right-drag to pan
+              </div>
+              <div class="dpad" id="dpad" aria-label="Move">
+                <span></span><button type="button" data-k="f" aria-label="Forward">▲</button><span></span>
+                <button type="button" data-k="l" aria-label="Left">◀</button
+                ><button type="button" data-k="b" aria-label="Back">▼</button
+                ><button type="button" data-k="r" aria-label="Right">▶</button>
+              </div>
+            </div>
+          </div>
+          <aside class="side">
+            <div>
+              <p class="eyebrow">Interior spaces · Millwork</p>
+              <h2 style="margin-top: 8px">Livingston Residence</h2>
+              <p class="muted" style="margin-top: 8px; font-size: 14px">
+                Open kitchen, library wall and lounge in walnut and ebonized oak, finished with a Calacatta
+                waterfall island.
+              </p>
+            </div>
+            <dl class="facts">
+              <dt>Location</dt>
+              <dd>Livingston, NJ</dd>
+              <dt>Completed</dt>
+              <dd>2024</dd>
+              <dt>Footprint</dt>
+              <dd class="mono">28′ × 20′</dd>
+              <dt>Scope</dt>
+              <dd>Cabinetry, island, library wall, fluted paneling, upholstery</dd>
+            </dl>
+            <div>
+              <p class="eyebrow" style="margin-bottom: 10px">Look closer</p>
+              <div class="hotspots" id="hotspots"></div>
+            </div>
+            <div>
+              <p class="eyebrow" style="margin-bottom: 10px">Before &amp; after</p>
+              <div class="ba" id="ba">
+                <img id="ba-after" alt="Finished kitchen and lounge" />
+                <div class="before"><img id="ba-before" alt="Empty concrete shell before work began" /></div>
+                <div class="line"></div>
+                <span class="tag l">Before</span><span class="tag r">After</span>
+                <input
+                  type="range"
+                  id="ba-range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Compare before and after"
+                />
+              </div>
+            </div>
+            <div style="display: grid; gap: 10px">
+              <a class="btn primary" href="#studio" id="design-like">Design a space like this</a>
+              <p class="muted" style="font-size: 12px">
+                Representative 3D model for the prototype. Production tours are built from Fatatelier's
+                project drawings or a scan of the finished space.
+              </p>
+            </div>
+          </aside>
+        </div>
+        <div class="wrap projects">
+          <div class="projects-head">
+            <div>
+              <p class="eyebrow">Portfolio</p>
+              <h2 style="margin-top: 8px">More projects to open in 3D</h2>
+            </div>
+            <p class="muted" style="max-width: 46ch; font-size: 14px">
+              Each completed project gets a walk-through tour plus its before, in-progress and final record.
+            </p>
+          </div>
+          <div class="proj-grid" id="proj-grid"></div>
+        </div>
+      </section>
+
+      <!-- STUDIO -->
+      <section class="view" id="view-studio">
+        <div class="studio" id="studio" data-tab="catalog">
+          <aside class="panel panel-catalog" id="catalog"></aside>
+          <div class="studio-center">
+            <div class="studio-bar">
+              <input class="name" id="design-name" aria-label="Design name" maxlength="60" />
+              <span class="pill" id="design-status">Draft</span>
+              <span class="save-state" id="save-state"></span>
+              <div class="tools" style="margin-left: auto">
+                <button type="button" class="btn sm" id="btn-new">New</button>
+                <button type="button" class="btn sm" id="btn-save">Save</button>
+                <button type="button" class="btn sm primary" id="btn-submit">Submit design</button>
+              </div>
+            </div>
+            <div class="studio-stage" id="studio-stage">
+              <div class="overlay tl">
+                <button type="button" class="btn sm glass" id="st-reset">Reset view</button>
+                <button type="button" class="btn sm glass" id="st-top">Top view</button>
+                <button type="button" class="btn sm glass" id="st-grid" aria-pressed="true">Grid</button>
+              </div>
+              <div class="overlay bl">
+                <div class="glass hint">
+                  Click a piece to select · drag it to move · R rotates · Delete removes
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-tabs" role="tablist">
+            <button type="button" data-tab="catalog" class="on">Add pieces</button>
+            <button type="button" data-tab="design">Customize</button>
+            <button type="button" data-tab="estimate">Estimate</button>
+          </div>
+          <aside class="panel panel-right">
+            <div class="insp" id="inspector"></div>
+            <div class="est" id="estimate"></div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ACCOUNT -->
+      <section class="view" id="view-account"><div class="wrap page" id="account"></div></section>
+
+      <!-- ADMIN -->
+      <section class="view" id="view-admin"><div class="wrap page" id="admin"></div></section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span
+          >Prototype by PT Digital Studio for Fatatelier · sample customers and projects · data stays in this
+          browser</span
+        >
+        <button type="button" class="linkbtn" id="reset-demo">Reset demo data</button>
+      </div>
+    </footer>
+
+    <div class="toasts" id="toasts" aria-live="polite"></div>
+    <div class="modal" id="modal" hidden>
+      <div class="modal-card" id="modal-card" role="dialog" aria-modal="true"></div>
+    </div>
+
+    <!-- 3D engine (Three.js r128) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
